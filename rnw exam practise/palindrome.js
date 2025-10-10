@@ -1,3 +1,4 @@
+// PALINDROME PROGRAMME
 let text = "madam";
 
 let reversed = text.split("").reverse().join("");
