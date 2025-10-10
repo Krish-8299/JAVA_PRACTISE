@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Second Largest Element Finder</title>
+</head>
+<body>
+
+  <h2>Find Second Largest Element</h2>
+
+  <label>Enter numbers (comma-separated):</label><br><br>
+  <input type="text" id="arrayInput" placeholder="e.g. 5,1,8,6,3">
+  <button onclick="findSecondLargest()">Find Second Largest</button>
+
+  <h3 id="result"></h3>
+
+  <script>
+    function findSecondLargest() {
+      let input = document.getElementById("arrayInput").value;
+      let arr = input.split(",").map(Number);
+
+      arr.sort((a, b) => b - a);
+
+      let secondLargest = arr[1];
+
+      document.getElementById("result").innerText = 
+        "Second largest element: " + secondLargest;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sum of Array</title>
+</head>
+<body>
+
+  <h2>Sum of Array Numbers</h2>
+
+  <label>Enter numbers (comma-separated):</label><br><br>
+  <input type="text" id="numbers" placeholder="Enter numbers... (required)">
+  <button onclick="calculateSum()">Calculate Sum</button>
+
+  <h3 id="result"></h3>
+
+  <script>
+    function calculateSum() {
+      let input = document.getElementById("numbers").value;
+      let arr = input.split(",").map(Number);
+      let sum = 0;
+
+      for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+      }
+
+      document.getElementById("result").innerText = "Sum: " + sum;
+    }
+  </script>
+
+</body>
+</html>

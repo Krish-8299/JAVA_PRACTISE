@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ALL</title>
+</head>
+<body>
+
+  <h2>Sum of Array Numbers</h2>
+  <label>Enter numbers (comma-separated):</label><br><br>
+  <input type="text" id="sumInput" placeholder="Enter numbers... (required)">
+  <button onclick="calculateSum()">Calculate Sum</button>
+
+  <h3 id="sumResult"></h3>
+
+  <hr>
+
+  <h2>Even and Odd Number Counter</h2>
+  <label>Enter numbers (comma-separated):</label><br><br>
+  <input type="text" id="evenoddInput" placeholder="Enter numbers... (required)">
+  <button onclick="calculateEvenOdd()">Count Even & Odd</button>
+
+  <h3 id="evenoddResult"></h3>
+
+  <script>
+    function calculateSum() {
+      let input = document.getElementById("sumInput").value;
+      let arr = input.split(",").map(Number);
+      let sum = 0;
+
+      for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+      }
+
+      document.getElementById("sumResult").innerText = "Sum: " + sum;
+    }
+
+    function calculateEvenOdd() {
+      let input = document.getElementById("evenoddInput").value;
+      let arr = input.split(",").map(Number);
+      let evenCount = 0;
+      let oddCount = 0;
+
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+          evenCount++;
+        } else {
+          oddCount++;
+        }
+      }
+
+      document.getElementById("evenoddResult").innerHTML =
+        "Even Numbers: " + evenCount + "<br>" +
+        "Odd Numbers: " + oddCount;
+    }
+  </script>
+
+</body>
+</html>

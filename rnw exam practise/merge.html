@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Merge Two Arrays</title>
+</head>
+<body>
+
+  <h2>Merge Two Arrays</h2>
+
+  <label>Enter first array (comma-separated):</label><br><br>
+  <input type="text" id="array1" placeholder="e.g. 1,2,3"><br><br>
+
+  <label>Enter second array (comma-separated):</label><br><br>
+  <input type="text" id="array2" placeholder="e.g. 4,5,6"><br><br>
+
+  <button onclick="mergeArrays()">Merge Arrays</button>
+
+  <h3 id="result"></h3>
+
+  <script>
+    function mergeArrays() {
+      
+      let input1 = document.getElementById("array1").value;
+      let input2 = document.getElementById("array2").value;
+
+      let arr1 = input1.split(",").map(Number);
+      let arr2 = input2.split(",").map(Number);
+
+      let merged = arr1.concat(arr2);
+
+      document.getElementById("result").innerText = "Merged Array: " + merged.join(", ");
+    }
+  </script>
+
+</body>
+</html>
