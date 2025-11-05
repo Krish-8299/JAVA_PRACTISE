@@ -1,4 +1,4 @@
-// LONGEST WORD PROGRAMME
+// ...existing code...
 function longestWord(sentence) {
   let words = sentence.split(" ");
   let longest = "";
@@ -10,3 +10,16 @@ function longestWord(sentence) {
   }
   return longest;
 }
+
+// ...existing code...
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.question('Enter a sentence: ', (answer) => {
+  console.log('Longest word:', longestWord(answer));
+  rl.close();
+});
