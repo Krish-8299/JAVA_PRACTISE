@@ -1,4 +1,4 @@
-ODD_EVEN_PROGRAMME
+// ODD_EVEN_PROGRAMME
 let arr = [1, 2, 3, 4, 5, 6]
 let evenCount = 0;
 let oddCount = 0;
